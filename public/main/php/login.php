@@ -32,8 +32,8 @@ require_once __DIR__ . '/../../controller/redirects/redirectIfBlocked.php';
 
 
               <div class="login__box-input">
-                <input type="password" name="password" required class="login__input" id="login-pas" placeholder="Password">
-                <i class="ri-eye-off-line login__eye"></i>
+                <input type="password" name="password" required class="login__input" id="login-pass" placeholder="Password">
+                <i class="ri-eye-off-line login__eye" id="login-eye"></i>
                </div>
             </div>
           </div>

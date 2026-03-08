@@ -1,0 +1,121 @@
+Listado de rutas de carpetas
+El número de serie del volumen es 2642-0968
+C:.
+|   estructura.txt
+|   
++---public
+|   |   index.php
+|   |   
+|   +---config
+|   |       config.php
+|   |       
+|   +---controller
+|   |   +---gets
+|   |   |       getAccesosFallidos.php
+|   |   |       getAccess.php
+|   |   |       getArchivosCompartidos.php
+|   |   |       getArchivosUsuario.php
+|   |   |       getArchivoVisual.php
+|   |   |       getIpsBloqueadas.php
+|   |   |       getUsuarios.php
+|   |   |       
+|   |   +---processors
+|   |   |       procBlocker.php
+|   |   |       procBorrarArchivo.php
+|   |   |       procCompartirArch.php
+|   |   |       procDeleteUser.php
+|   |   |       procDescargaArchivos.php
+|   |   |       procDescompartirArch.php
+|   |   |       procLogin.php
+|   |   |       procRegistro.php
+|   |   |       procSubirArchivo.php
+|   |   |       procUnBlocker.php
+|   |   |       
+|   |   +---redirects
+|   |   |       redirectIfBlocked.php
+|   |   |       redirectIfLogged.php
+|   |   |       
+|   |   \---requesters
+|   |           requireAdmin.php
+|   |           requireLogin.php
+|   |           
+|   +---main
+|   |   +---css
+|   |   |   |   footer.css
+|   |   |   |   header.css
+|   |   |   |   index.css
+|   |   |   |   log-reg.css
+|   |   |   |   panelArchivos.css
+|   |   |   |   style.css
+|   |   |   |   
+|   |   |   \---img-css
+|   |   |           log-reg.jpg
+|   |   |           
+|   |   +---html
+|   |   +---img
+|   |   +---js
+|   |   |       accesosDinamicos.js
+|   |   |       accesosFallidosDinamicos.js
+|   |   |       app.js
+|   |   |       archivosCompartidos.js
+|   |   |       blockerIP.js
+|   |   |       borradorArchivos.js
+|   |   |       comparticionArchivos.js
+|   |   |       deletUser.js
+|   |   |       ipsBlocked.js
+|   |   |       panelArchivos.js
+|   |   |       unBlock.js
+|   |   |       usuariosDinamicos.js
+|   |   |       
+|   |   \---php
+|   |       |   adminPanel.php
+|   |       |   login.php
+|   |       |   logout.php
+|   |       |   mainUser.php
+|   |       |   registro.php
+|   |       |   
+|   |       +---AdPanel
+|   |       |       adminAccesos.php
+|   |       |       adminAccesosFallidos.php
+|   |       |       adminIPsBlocked.php
+|   |       |       adminUsuarios.php
+|   |       |       
+|   |       +---Blocked
+|   |       |       bloqueado.php
+|   |       |       
+|   |       \---UserPanel
+|   |               panelUsuario.php
+|   |               
+|   \---templates
+|           footer.php
+|           header.php
+|           
+\---uploads
+    |   Restricciones.htaccess
+    |   
+    \---usuarios
+        +---1
+        |       699b5b648daba.jpg
+        |       699b5c1a85df3.mp4
+        |       
+        +---10
+        +---11
+        |       699f289425f42.jpeg
+        |       699f2dcebe992.jpg
+        |       
+        +---12
+        |       699f426564830.jpg
+        |       
+        +---2
+        |       6995aca8cef5e.jpg
+        |       69960696c94a4.mp4
+        |       6996069f8888b.jpg
+        |       
+        +---6
+        +---7
+        |       699b96b42514d.jpg
+        |       
+        +---8
+        |       699b8aa56f4fc.jpg
+        |       
+        \---9

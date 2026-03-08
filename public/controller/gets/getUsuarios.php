@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/../../config/config.php';
+require_once __DIR__ . '/../requesters/requireAdmin.php';
 
 // Obtener usuarios
 $stmt = $db->query("SELECT id, usuario, email, rol, creado_en FROM usuarios ORDER BY id ASC");
