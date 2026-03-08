@@ -1,0 +1,9 @@
+# Desactivar PHP en esta carpeta
+php_flag engine off
+
+# Evitar ejecución de scripts
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8
+
+# Bloquear ejecución de HTML y SVG
+AddType text/plain .html .htm .svg

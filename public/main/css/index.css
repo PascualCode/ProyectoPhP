@@ -1,0 +1,90 @@
+body {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Importante */
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    width: 100%;
+    display: block;
+}
+
+/* El contenedor ahora ocupa TODO el espacio entre header y footer */
+.options {
+    display: flex;
+    gap: 10px;
+    width: 90%;
+    flex: 1; /* Se expande verticalmente */
+    min-height: 0; /* Evita problemas de overflow */
+    margin: 20px 0;
+}
+
+.option {
+    flex: 1;
+    background-image: var(--optionImage);
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: flex 0.6s ease;
+    overflow: hidden;
+}
+
+.option.active {
+    flex: 4;
+}
+
+.option:not(.active) {
+    filter: brightness(0.6);
+}
+
+.label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.option.active .label {
+    opacity: 1;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info .main {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.info .sub {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+

@@ -1,0 +1,260 @@
+.user-panel-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.upload-area {
+    border: 2px dashed #9ca3af;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    color: #4b5563;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.upload-area.dragover {
+    border-color: #2563eb;
+    background: #e0edff;
+    color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+.upload-area:hover {
+    background: #f0f0f0;
+}
+
+.files-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.file-card {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: 0.2s;
+}
+
+.file-card img,
+.file-card video {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Botones dentro de las tarjetas */
+.file-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    white-space: nowrap;          /* Evita que el texto se parta */
+    flex: 1 1 auto;               /* Permite que se adapten al ancho disponible */
+    text-align: center;           /* Centra el texto */
+    min-width: 80px;              /* Evita que se hagan demasiado pequeños */
+}
+
+.file-btn.delete {
+    background: #d9534f;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    margin-bottom: 20px;
+    background: #4a6cf7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.back-btn:hover {
+    background: #3b57c9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+}
+
+.back-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.file-meta {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.file-card p {
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;   /* Muestra ... */
+    max-width: 100%;
+}
+
+.file-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Contenedor del selector */
+.ordenar-select {
+    padding: 8px 14px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #f8f8f8;
+    margin-bottom: 20px;      /* Espacio inferior */
+    margin-top: 10px;         /* Espacio superior */
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: inline-block;
+}
+
+/* Hover */
+.ordenar-select:hover {
+    background: #eef2ff;
+    border-color: #4a6cf7;
+}
+
+/* Cuando se enfoca */
+.ordenar-select:focus {
+    outline: none;
+    border-color: #4a6cf7;
+    box-shadow: 0 0 4px rgba(74,108,247,0.4);
+}
+
+.error-upload {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #dc2626;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+/* Contenedor de botones dentro de cada tarjeta */
+.file-actions {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;              /* Permite que los botones salten a otra línea */
+    gap: 8px;                     /* Espacio uniforme entre botones */
+    justify-content: center;      /* Centra los botones */
+}
+
+/* Botón borrar */
+.file-btn.delete {
+    background: #d9534f;
+}
+
+/* Botón compartir */
+.file-btn.share {
+    background: #2563eb;
+}
+
+/* Botón dejar de compartir */
+.file-btn.unshare {
+    background: #9333ea;
+}
+
+/* =============================== */
+/*        RESPONSIVE MÓVIL         */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+    /* Contenedor general */
+    .user-panel-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    /* Área de subida */
+    .upload-area {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    /* Grid de archivos: 1 columna en móvil */
+    .files-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* Tarjetas más cómodas */
+    .file-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    /* Miniaturas más grandes y fluidas */
+    .file-card img,
+    .file-card video {
+        max-height: 200px;
+        border-radius: 8px;
+    }
+
+    /* Texto del nombre del archivo */
+    .file-card p {
+        font-size: 13px;
+        white-space: normal; /* Permite que el nombre se parta en varias líneas */
+        text-align: center;
+    }
+
+    /* Metadatos */
+    .file-meta {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* Botones dentro de la tarjeta */
+    .file-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .file-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        min-width: unset;
+    }
+
+    /* Botón volver */
+    .back-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* Selector ordenar */
+    .ordenar-select {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}

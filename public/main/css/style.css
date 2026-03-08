@@ -1,0 +1,401 @@
+/* ------------------------------ */
+/*   ESTILO GLOBAL DE LA PÁGINA   */
+/* ------------------------------ */
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    min-height: 100vh;
+}
+
+/* El contenedor principal debe crecer para empujar el footer abajo */
+.admin-container,
+.main-container {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+
+/* ------------------------------ */
+/*     CONTENEDOR CENTRAL         */
+/* ------------------------------ */
+
+.main-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ------------------------------ */
+/*     FORMULARIO DE REGISTRO     */
+/* ------------------------------ */
+
+.form-container {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #222;
+}
+
+/* Grupos de inputs */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+/* Labels */
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+    font-size: 14px;
+}
+
+/* Inputs */
+.form-group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    background: #fafafa;
+}
+
+.form-group input:focus {
+    border-color: #0078ff;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,120,255,0.35);
+    outline: none;
+}
+
+/* Botón */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #0078ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 5px;
+}
+
+.form-container button:hover {
+    background: #005fcc;
+}
+
+/* ------------------------------ */
+/*        MENSAJES DE ERROR       */
+/* ------------------------------ */
+
+.error, .success {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.error {
+    background: #ffe5e5;
+    color: #b30000;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #c3e6cb;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ------------------------------ */
+/*             INDEX              */
+/* ------------------------------ */
+
+.home-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    max-width: 600px;
+    text-align: center;
+}
+
+.home-actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.home-btn {
+    background: #0078ff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.home-btn:hover {
+    background: #005fcc;
+}
+
+/* ------------------------------ */
+/*           MAIN USER            */
+/* ------------------------------ */
+
+/* Contenedor general en dos columnas */
+.user-panel {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+/* Caja del usuario y accesos */
+.user-box, .access-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    width: 45%;
+    min-height: 200px;
+}
+
+/* Texto centrado solo en la caja del usuario */
+.user-box {
+    text-align: center;
+}
+
+/* Lista de accesos */
+.access-list {
+    list-style: none;
+    padding: 0;
+}
+
+.access-list li {
+    background: #f5f5f5;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ------------------------------ */
+/*         PANEL ADMIN            */
+/* ------------------------------ */
+.admin-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.admin-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.admin-card:hover {
+    transform: scale(1.03);
+    background: #f0f8ff;
+}
+
+/* ------------------------------ */
+/*      PANEL ADMIN USER          */
+/* ------------------------------ */
+.adminU-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+.adminU-table th, .adminU-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.adminU-table th {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+.adminU-table tr:hover {
+    background: #f9f9f9;
+}
+
+.adminU-table-action-btn {
+    padding: 6px 10px;
+    background: #0078ff;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.adminU-table-action-btn.adminU-table-delete {
+    background: #d9534f;
+}
+
+.adminU-table-action-btn:hover {
+    opacity: 0.85;
+}
+
+/* ------------------------------ */
+/*     PANEL ADMIN ACCESOS        */
+/* ------------------------------ */
+.adminA-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+.adminA-table th, .adminA-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.adminA-table th {
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+.adminA-table tr:hover {
+    background: #f9f9f9;
+}
+
+/* ------------------------------ */
+/*         ANIMACIONES            */
+/* ------------------------------ */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================== */
+/*        RESPONSIVE MÓVIL         */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+    /* --- BODY --- */
+    body {
+        font-size: 15px;
+    }
+
+    /* --- MAIN CONTAINER --- */
+    .main-container {
+        padding: 15px;
+    }
+
+    /* --- FORMULARIOS --- */
+    .form-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    /* --- HOME --- */
+    .home-box {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .home-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .home-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- PANEL DE USUARIO --- */
+    .user-panel {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .user-box,
+    .access-box {
+        width: 100%;
+    }
+
+    /* --- ADMIN PANEL --- */
+    .admin-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .admin-card {
+        padding: 18px;
+    }
+
+    /* --- TABLAS ADMIN --- */
+    .adminU-table th,
+    .adminU-table td,
+    .adminA-table th,
+    .adminA-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .adminU-table-action-btn {
+        display: inline-block;
+        margin-bottom: 6px;
+    }
+}
