@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/main/css/panelArchivos.css">
+
 <?php
 require_once __DIR__ . '/../../../controller/requesters/requireLogin.php';
 require_once __DIR__ . '/../../../templates/header.php';

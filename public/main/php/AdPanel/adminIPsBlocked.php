@@ -2,7 +2,7 @@
 require_once __DIR__ . '/../../../controller/requesters/requireAdmin.php';
 require_once __DIR__ . '/../../../templates/header.php';
 ?>
-<link rel="stylesheet" href="/main/css/style.css">
+<link rel="stylesheet" href="/main/css/administrador.css">
 
 <body>
     <div class="admin-container">

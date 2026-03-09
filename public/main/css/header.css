@@ -4,8 +4,9 @@
 
 header {
     width: 100%;
-    height: 55px;
-    background: #1f1f1f; /* Gris oscuro elegante */
+    height: 55px !important;
+    /* ¡Aquí está la magia! Aumentado de 55px a 75px */
+    background: #1f1f1f;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +15,6 @@ header {
     /* Sombra apagada por defecto */
     box-shadow: 0 0 0 rgba(0, 180, 255, 0);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
-
 }
 
 /* Sombra azul neón al pasar el ratón */
@@ -26,16 +26,18 @@ header:hover {
 /* Contenedor interno centrado y equilibrado */
 .header-container {
     width: 90%;
-    height: 100%;
+    height: 55px !important;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Título a la izquierda, botones a la derecha */
+    justify-content: space-between;
+    /* Título a la izquierda, botones a la derecha */
 }
 
 /* Título centrado verticalmente y bien visible */
 header h1 {
     margin: 0;
-    margin-left: 15px; /* ← Separación del borde izquierdo */
+    margin-left: 15px;
+    /* ← Separación del borde izquierdo */
     font-size: 1.1rem;
     color: #e6e6e6;
     font-weight: 600;
@@ -64,6 +66,58 @@ header h1 {
 
 .no-a {
     text-decoration: none;
+}
+
+/* =============================== */
+/* LOGO Y TÍTULO DE LA MARCA       */
+/* =============================== */
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Separación entre el icono y el texto */
+    text-decoration: none;
+    margin-left: 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto al pasar el ratón por el logo entero */
+.brand-logo:hover {
+    transform: scale(1.03);
+    filter: brightness(1.2);
+}
+
+/* El icono de la caja */
+.box-icon {
+    width: 32px;
+    height: 32px;
+    color: #00b4ff;
+    /* Azul neón */
+    filter: drop-shadow(0 0 8px rgba(0, 180, 255, 0.6));
+    /* Resplandor del icono */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.brand-logo:hover .box-icon {
+    transform: rotate(15deg) translateY(-2px);
+    /* La cajita se inclina y salta un poco */
+}
+
+/* El texto del título */
+.brand-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    /* Efecto de degradado metálico/neón */
+    background: linear-gradient(90deg, #ffffff, #00b4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Sombra de texto compatible con el degradado */
+    filter: drop-shadow(0 0 10px rgba(0, 180, 255, 0.3));
 }
 
 /* =============================== */

@@ -26,7 +26,7 @@ function redirigir_con_error($mensaje) {
         $stmt->execute([$ip]); 
     }
 
-    header("Location: /../../main/php/login.php?error=" . urlencode($mensaje));
+    header("Location: ../../main/php/login.php?error=" . urlencode($mensaje));
     exit;
 }
 
@@ -68,5 +68,5 @@ $stmt = $db->prepare("INSERT INTO accesos (usuario_id, ip, fecha) VALUES (?, ?, 
 $stmt->execute([$user['id'], $ip, $fecha]);
 
 // Redirigir al index
-header("Location: /../../../index.php");
+header("Location: ../../../index.php");
 exit;

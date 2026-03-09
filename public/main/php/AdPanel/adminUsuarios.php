@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../../templates/header.php';
 $stmt = $db->query("SELECT id, usuario, email, rol, creado_en FROM usuarios ORDER BY id ASC");
 $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<link rel="stylesheet" href="/main/css/style.css">
+<link rel="stylesheet" href="/main/css/administrador.css">
 
 <body>
     <div class="admin-container">

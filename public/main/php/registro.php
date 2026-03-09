@@ -13,22 +13,24 @@ require_once __DIR__ . '/../../controller/redirects/redirectIfBlocked.php';
   <div class="login">
     <img src="./../css/img-css/log-reg.jpg" alt="login image" class="login__img">
 
-    <?php if (isset($_GET['error'])): ?>
-      <div class="error"><?php echo htmlspecialchars($_GET['error']); ?></div>
-    <?php endif; ?>
-
-
-    <?php if (isset($_GET['success'])): ?>
-      <div class="success"> Usuario registrado correctamente. Redirigiendo... </div>
-      <script>
-        setTimeout(function () {
-          window.location.href = "/../../index.php";
-        }, 2000); // 2000 ms = 2 segundos
-      </script>
-    <?php endif; ?>
-
-    <form action='/../controller/processors/procRegistro.php' method="POST" class="login__form">
+    <form action='../controller/processors/procRegistro.php' method="POST" class="login__form">
       <h1 class="login__title">login</h1>
+
+      <?php if (isset($_GET['error'])): ?>
+        <div class="error">
+          <?php echo htmlspecialchars($_GET['error']); ?>
+        </div>
+      <?php endif; ?>
+
+
+      <?php if (isset($_GET['success'])): ?>
+        <div class="success"> Usuario registrado correctamente. Redirigiendo... </div>
+        <script>
+          setTimeout(function () {
+            window.location.href = "../../index.php";
+          }, 2000); // 2000 ms = 2 segundos
+        </script>
+      <?php endif; ?>
 
       <div class="login__content">
         <div class="login__box">

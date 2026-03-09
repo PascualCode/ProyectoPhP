@@ -4,61 +4,64 @@ require_once __DIR__ . "/templates/header.php";
 require_once __DIR__ . "/config/config.php";
 require_once __DIR__ . "/controller/redirects/redirectIfBlocked.php";
 ?>
-<?php if (isset($_GET['error'])): ?>
-        <div class="error"><?php echo htmlspecialchars($_GET['error']); ?></div>
-<?php endif; ?>
 
 <head>
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="/main/css/index.css">
 
 </head>
+
 <body>
-
+    
+    <?php if (isset($_GET['error'])): ?>
+        <div class="error-global">
+            <div class="error"><?php echo htmlspecialchars($_GET['error']); ?></div>
+        </div>
+    <?php endif; ?>
     <div class="options">
+        
         <div class="option active"
-             style="--optionImage: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200');">
+             style="--optionImage: url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200');">
             <div class="label">
-                <div class="icon"><i class="fas fa-walking"></i></div>
+                <div class="icon"><i class="fas fa-network-wired"></i></div>
                 <div class="info">
-                    <div class="main">Nature Walk</div>
-                    <div class="sub">Beautiful mountain scenery</div>
+                    <div class="main">Redes y Conexiones</div>
+                    <div class="sub">Infraestructura y comunicación de datos</div>
                 </div>
             </div>
         </div>
 
         <div class="option"
-             style="--optionImage: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=1200');">
+             style="--optionImage: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200');">
             <div class="label">
-                <div class="icon"><i class="fas fa-tree"></i></div>
+                <div class="icon"><i class="fas fa-database"></i></div>
                 <div class="info">
-                    <div class="main">Forest</div>
-                    <div class="sub">Green & peaceful environment</div>
+                    <div class="main">Bases de Datos</div>
+                    <div class="sub">Almacenamiento y gestión de la información</div>
                 </div>
             </div>
         </div>
 
         <div class="option"
-             style="--optionImage: url('https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=1200');">
+             style="--optionImage: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200');">
             <div class="label">
-                <div class="icon"><i class="fas fa-mountain"></i></div>
+                <div class="icon"><i class="fas fa-laptop-code"></i></div>
                 <div class="info">
-                    <div class="main">Mountains</div>
-                    <div class="sub">Snowy high peaks</div>
+                    <div class="main">Desarrollo Web</div>
+                    <div class="sub">Implantación y programación del proyecto</div>
                 </div>
             </div>
         </div>
 
         <div class="option"
-             style="--optionImage: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200');">
+             style="--optionImage: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200');">
             <div class="label">
-                <div class="icon"><i class="fas fa-water"></i></div>
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
                 <div class="info">
-                    <div class="main">Lake View</div>
-                    <div class="sub">Calm and relaxing water</div>
+                    <div class="main">Ciberseguridad</div>
+                    <div class="sub">Protección, roles y control de accesos</div>
                 </div>
             </div>
         </div>
@@ -95,5 +98,3 @@ require_once __DIR__ . "/controller/redirects/redirectIfBlocked.php";
 <?php
 require_once __DIR__ . "/templates/footer.php";
 ?>
-
-

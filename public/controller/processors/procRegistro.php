@@ -1,8 +1,9 @@
 <?php
 require_once __DIR__ . '/../../config/config.php';
 
-function redirigir_con_error($mensaje) {
-    header("Location: /../../main/php/registro.php?error=" . urlencode($mensaje));
+function redirigir_con_error($mensaje)
+{
+    header("Location: ../../main/php/registro.php?error=" . urlencode($mensaje));
     exit;
 }
 
@@ -12,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $usuario = trim($_POST['usuario'] ?? '');
 $email = trim($_POST['email'] ?? '');
-$password = $_POST['password']  ?? '';
+$password = $_POST['password'] ?? '';
 $password2 = $_POST['password2'] ?? '';
 
 if ($usuario === '' || $email === '' || $password === '' || $password2 === '') {
@@ -25,6 +26,15 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 if ($password !== $password2) {
     redirigir_con_error("Las contraseñas no coinciden");
+}
+
+// Validar robustez de la contraseña
+$longitud_valida = strlen($password) >= 8;
+$tiene_mayuscula = preg_match('/[A-Z]/', $password);
+$tiene_especial = preg_match('/[\W_]/', $password); // \W busca cualquier cosa que no sea letra o número
+
+if (!$longitud_valida || !$tiene_mayuscula || !$tiene_especial) {
+    redirigir_con_error("La contraseña debe tener al menos 8 caracteres, una letra mayúscula y un carácter especial.");
 }
 
 // Comprobar si el usuario ya existe
@@ -57,7 +67,7 @@ if (!file_exists($directorio)) {
 }
 
 
-header("Location: /../../main/php/registro.php?success=1"); 
+header("Location: ../../main/php/registro.php?success=1");
 exit;
 
 ?>

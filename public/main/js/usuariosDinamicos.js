@@ -15,14 +15,14 @@ function cargarUsuarios() {
                     if (u.bloqueado == 1) {
                         accionHTML = `
                             <a href="#" onclick="desbloquearIP('${u.ip}', '${u.usuario}')" 
-                            class="adminU-table-action-btn adminU-table-unblock">
+                            class="action-btn edit">
                             Desbloquear
                             </a>
                         `;
                     } else {
                         accionHTML = `
                             <a href="#" onclick="bloquearIP('${u.id}', '${u.usuario}')" 
-                            class="adminU-table-action-btn">
+                            class="action-btn danger">
                             Bloquear
                             </a>
                         `;
@@ -39,7 +39,7 @@ function cargarUsuarios() {
                         <td>
                             ${accionHTML}
                             <a href="#" onclick="borrarUsuario(${u.id})" 
-                            class="adminU-table-action-btn adminU-table-delete">
+                            class="action-btn danger">
                             Borrar
                             </a>
                         </td>

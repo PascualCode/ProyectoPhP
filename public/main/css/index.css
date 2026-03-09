@@ -88,3 +88,23 @@ header, footer {
     opacity: 0.8;
 }
 
+.error {
+    background: #ffe5e5;
+    color: #b30000;
+    text-align: center;
+}
+
+/* Notificación flotante para el index */
+.error-global {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px;
+}
+
+.error-global .error {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Le da un toque 3D */
+}

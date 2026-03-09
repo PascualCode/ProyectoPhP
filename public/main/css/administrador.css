@@ -1,0 +1,229 @@
+/* ------------------------------ */
+/* RESETEO Y FONDO GLOBAL         */
+/* ------------------------------ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #05070a; /* Fondo negro profundo cyber */
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ------------------------------ */
+/* CONTENEDOR PRINCIPAL           */
+/* ------------------------------ */
+.admin-container {
+    width: 95%;
+    max-width: 1300px;
+    margin: 40px auto;
+    flex: 1 0 auto;
+}
+
+/* Títulos de sección */
+.admin-container h1, .admin-container h2 {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.2);
+    font-weight: 600;
+}
+
+/* ------------------------------ */
+/* GRID DEL PANEL PRINCIPAL       */
+/* (Para adminPanel.php)          */
+/* ------------------------------ */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.admin-card {
+    background: linear-gradient(145deg, #11151e, #0a0c12);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #8b9bb4;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 120, 255, 0.2);
+    border-color: rgba(0, 120, 255, 0.5);
+    color: #ffffff;
+}
+
+.admin-card i {
+    font-size: 3rem;
+    color: #00b4ff;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.admin-card:hover i {
+    transform: scale(1.1);
+    color: #00e6ac; /* Cambia a esmeralda al hover */
+    filter: drop-shadow(0 0 10px rgba(0, 230, 172, 0.5));
+}
+
+.admin-card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+/* ------------------------------ */
+/* TABLAS DE DATOS MODERNAS       */
+/* (Para Accesos, Usuarios, IPs)  */
+/* ------------------------------ */
+.table-wrapper {
+    background: linear-gradient(145deg, #11151e, #0a0c12);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    overflow-x: auto; /* Scroll horizontal si no cabe */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+th {
+    background: rgba(0, 120, 255, 0.05);
+    color: #00b4ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Efecto hover en las filas de la tabla */
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* ------------------------------ */
+/* BOTONES DE ACCIÓN EN TABLAS    */
+/* ------------------------------ */
+.action-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+}
+
+/* Desbloquear / Editar (Azul/Verde) */
+.action-btn.edit {
+    color: #00c896;
+    border-color: #00c896;
+    background: rgba(0, 200, 150, 0.05);
+}
+.action-btn.edit:hover {
+    background: #00c896;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 200, 150, 0.4);
+}
+
+/* Bloquear / Eliminar (Rojo) */
+.action-btn.danger {
+    color: #ff4d4d;
+    border-color: #dc2626;
+    background: rgba(220, 38, 38, 0.05);
+}
+.action-btn.danger:hover {
+    background: #dc2626;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.4);
+}
+
+/* ------------------------------ */
+/* ETIQUETAS DE ESTADO (Badges)   */
+/* ------------------------------ */
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge.admin {
+    background: rgba(139, 92, 246, 0.1);
+    color: #b49bff;
+    border: 1px solid #8b5cf6;
+}
+
+.badge.user {
+    background: rgba(0, 180, 255, 0.1);
+    color: #00b4ff;
+    border: 1px solid #00b4ff;
+}
+
+.badge.blocked {
+    background: rgba(220, 38, 38, 0.1);
+    color: #ff4d4d;
+    border: 1px solid #dc2626;
+}
+
+/* ------------------------------ */
+/* BUSCADORES / FILTROS           */
+/* ------------------------------ */
+.admin-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.admin-search {
+    padding: 10px 15px;
+    background: #0d1117;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 250px;
+}
+
+.admin-search:focus {
+    border-color: #0078ff;
+    box-shadow: 0 0 12px rgba(0, 120, 255, 0.4);
+}

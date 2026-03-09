@@ -26,11 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarCompartidos();
 });
 
-// Cuando el usuario selecciona archivos
-fileInput.addEventListener("change", () => {
-    subirArchivos(fileInput.files);
-});
-
 // Click abre el selector
 uploadArea.addEventListener("click", () => fileInput.click());
 

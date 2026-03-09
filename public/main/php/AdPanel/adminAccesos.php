@@ -13,7 +13,7 @@ $stmt = $db->query("
 
 $accesos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-<link rel="stylesheet" href="/main/css/style.css">
+<link rel="stylesheet" href="/main/css/administrador.css">
 
 <body>
     <div class="adminU-container">
